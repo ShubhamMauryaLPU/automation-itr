@@ -1,0 +1,381 @@
+2025-11-05 13:34:08,584 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:34:08,587 - INFO - Completed /api/itr/process in 0.002s
+2025-11-05 13:34:26,248 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:34:26,249 - INFO - Completed /api/itr/process in 0.001s
+2025-11-05 13:35:37,030 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:35:37,031 - INFO - Completed /api/itr/process in 0.001s
+2025-11-05 13:37:28,327 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:37:28,331 - INFO - Completed /api/itr/process in 0.004s
+2025-11-05 13:38:09,227 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:38:09,232 - INFO - Completed /api/itr/process in 0.005s
+2025-11-05 13:38:17,389 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:38:17,391 - INFO - Completed /api/itr/process in 0.001s
+2025-11-05 13:48:22,299 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:48:22,303 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 13:48:22,339 - INFO - Completed /api/itr/process in 0.04s
+2025-11-05 13:50:25,753 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 13:50:25,755 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 13:50:25,767 - INFO - Completed /api/itr/process in 0.014s
+2025-11-05 14:04:40,597 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:04:40,603 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:04:40,822 - INFO - Completed /api/itr/process in 0.225s
+2025-11-05 14:21:52,932 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:21:52,936 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:21:52,953 - INFO - Completed /api/itr/process in 0.021s
+2025-11-05 14:23:27,794 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:23:27,797 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:23:27,814 - INFO - Completed /api/itr/process in 0.02s
+2025-11-05 14:25:06,324 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:25:06,327 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:25:06,343 - INFO - Completed /api/itr/process in 0.02s
+2025-11-05 14:26:05,221 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:26:05,223 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:26:05,233 - INFO - Completed /api/itr/process in 0.012s
+2025-11-05 14:27:33,997 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:27:33,999 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Program Files\Python313\Lib\asyncio\subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 1802, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 539, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:27:34,011 - INFO - Completed /api/itr/process in 0.015s
+2025-11-05 14:44:23,251 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:44:23,253 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 222, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 1708, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 502, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:44:23,294 - INFO - Completed /api/itr/process in 0.043s
+2025-11-05 14:46:40,207 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:46:40,210 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 222, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 1708, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 502, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:46:40,213 - INFO - Completed /api/itr/process in 0.005s
+2025-11-05 14:48:08,488 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:48:08,493 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Connection.run() done, defined at C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\email\OneDrive\Desktop\ezkar\python_service_mvc\venv312\Lib\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 222, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 1708, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 502, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 14:48:08,638 - INFO - Completed /api/itr/process in 0.15s
+2025-11-05 14:48:35,040 - INFO - Incoming request: /health from 127.0.0.1
+2025-11-05 14:48:35,043 - INFO - Completed /health in 0.003s
+2025-11-05 14:48:35,272 - INFO - Incoming request: /favicon.ico from 127.0.0.1
+2025-11-05 14:48:35,273 - INFO - Completed /favicon.ico in 0.001s
+2025-11-05 14:49:35,500 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:50:52,971 - INFO - Completed /api/itr/process in 77.471s
+2025-11-05 14:52:39,735 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:53:45,352 - INFO - Completed /api/itr/process in 65.616s
+2025-11-05 14:54:10,793 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:54:17,721 - INFO - Completed /api/itr/process in 6.927s
+2025-11-05 14:55:18,191 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:56:24,579 - INFO - Completed /api/itr/process in 66.388s
+2025-11-05 14:56:34,141 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:57:40,783 - INFO - Completed /api/itr/process in 66.642s
+2025-11-05 14:57:45,557 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 14:58:50,876 - INFO - Completed /api/itr/process in 65.319s
+2025-11-05 15:02:17,958 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:02:19,280 - INFO - Completed /api/itr/process in 1.319s
+2025-11-05 15:03:08,893 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:03:09,918 - INFO - Completed /api/itr/process in 1.024s
+2025-11-05 15:03:19,723 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:03:20,519 - INFO - Completed /api/itr/process in 0.796s
+2025-11-05 15:03:30,306 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:04:35,501 - INFO - Completed /api/itr/process in 65.195s
+2025-11-05 15:04:40,746 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:05:47,162 - INFO - Completed /api/itr/process in 66.416s
+2025-11-05 15:06:03,046 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:07:07,276 - INFO - Completed /api/itr/process in 64.231s
+2025-11-05 15:07:16,795 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:08:20,749 - INFO - Completed /api/itr/process in 63.954s
+2025-11-05 15:14:41,294 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:15:45,494 - INFO - Completed /api/itr/process in 64.2s
+2025-11-05 15:16:04,106 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:16:04,110 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 15:16:05,313 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-05 15:16:08,189 - INFO - Filling User ID…
+2025-11-05 15:16:16,978 - INFO - Clicked first-step Continue/Proceed.
+2025-11-05 15:16:17,436 - INFO - Filling Password…
+2025-11-05 15:16:24,703 - INFO - Submitted password (clicked button).
+2025-11-05 15:16:25,731 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-05 15:16:30,873 - INFO - Navigating to profile…
+2025-11-05 15:16:33,501 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-05 15:16:39,158 - INFO - Waiting for profile content to render…
+2025-11-05 15:16:57,221 - INFO - Profile fields captured.
+2025-11-05 15:16:57,463 - INFO - Completed /api/itr/process in 53.357s
+2025-11-05 15:17:55,292 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:17:55,294 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 15:17:56,404 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-05 15:17:59,431 - INFO - Filling User ID…
+2025-11-05 15:18:08,222 - INFO - Clicked first-step Continue/Proceed.
+2025-11-05 15:18:08,677 - INFO - Filling Password…
+2025-11-05 15:18:15,957 - INFO - Submitted password (clicked button).
+2025-11-05 15:18:16,935 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-05 15:18:22,024 - INFO - Navigating to profile…
+2025-11-05 15:18:24,529 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-05 15:18:30,211 - INFO - Waiting for profile content to render…
+2025-11-05 15:18:48,328 - INFO - Profile fields captured.
+2025-11-05 15:18:48,599 - INFO - Completed /api/itr/process in 53.307s

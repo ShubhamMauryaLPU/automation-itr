@@ -1,0 +1,27 @@
+{
+  "fetchedAt": "2025-11-05T09:23:45.093392Z",
+  "profile": {
+    "nameOfOrganisation": "EZKAR PRIVATE LIMITED",
+    "dateOfIncorporation": "14-Aug-2018",
+    "pan": "AAFCE1416J",
+    "panStatus": "Active",
+    "residentialStatus": "Resident",
+    "typeOfCompany": "--",
+    "email": "Primary (--) riteshkhetan87@gmail.com Secondary (--) --",
+    "mobile": "Primary (Director) +91 9452865414 Secondary (--) --",
+    "address": "B 27/78 A-1, Bhelupura S.O, Bhelupura, VARANASI, 221010, Uttar Pradesh, INDIA",
+    "raw": {
+      "Name of Organisation": "EZKAR PRIVATE LIMITED",
+      "Date of Incorporation": "14-Aug-2018",
+      "PAN": "AAFCE1416J",
+      "PAN Status": "Active",
+      "Residential Status": "Resident",
+      "Type of Company": "--",
+      "Email": "Primary (--) riteshkhetan87@gmail.com Secondary (--) --",
+      "Mobile": "Primary (Director) +91 9452865414 Secondary (--) --",
+      "Address": "B 27/78 A-1, Bhelupura S.O, Bhelupura, VARANASI, 221010, Uttar Pradesh, INDIA"
+    },
+    "title": "My Profile, Income Tax Portal, Government of India",
+    "url": "https://eportal.incometax.gov.in/iec/foservices/#/dashboard/myProfile/profileDetail"
+  }
+}

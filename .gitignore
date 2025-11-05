@@ -1,0 +1,26 @@
+# Environment variables
+.env
+*.env
+
+# Virtual environments
+venv*/
+.env*/
+__pycache__/
+
+# Python cache and build files
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+__pycache__/
+build/
+dist/
+*.egg-info/
+
+# IDE-specific
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db

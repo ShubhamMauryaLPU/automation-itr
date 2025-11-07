@@ -1,4 +1,6 @@
 from fastapi import APIRouter, Request, HTTPException
+from celery import states
+
 from app.tasks.profile_tasks import fetch_itr_profile_task
 from app.core.celery_app import celery_app
 
@@ -35,8 +37,21 @@ async def get_task_status(task_id: str):
     Get Celery task status and result.
     """
     task_result = celery_app.AsyncResult(task_id)
+
+    if task_result.successful():
+        result_payload = task_result.result
+    elif task_result.failed():
+        error = task_result.result
+        message = str(error)
+        result_payload = {"status": "error", "message": message}
+    elif task_result.state == states.RETRY:
+        retry_info = task_result.result
+        result_payload = {"status": "retry", "message": str(retry_info)}
+    else:
+        result_payload = None
+
     return {
         "task_id": task_id,
         "status": task_result.status,
-        "result": task_result.result if task_result.ready() else None
+        "result": result_payload,
     }

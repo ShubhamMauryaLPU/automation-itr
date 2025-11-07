@@ -1,2 +1,7 @@
-def sanitize_input(text: str) -> str:
-    return text.strip().replace("\n", " ")
+from typing import Optional
+
+
+def sanitize_input(text: Optional[str]) -> str:
+    if text is None:
+        return ""
+    return " ".join(text.strip().splitlines())

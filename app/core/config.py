@@ -9,5 +9,6 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     API_PREFIX: str = "/api/itr"
+    API_KEY: str = "change-me"
 
 settings = Settings()

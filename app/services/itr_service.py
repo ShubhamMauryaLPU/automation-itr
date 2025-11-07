@@ -7,12 +7,13 @@ import random
 import argparse
 import logging
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Callable, Awaitable
+from typing import Any, Dict, List, Optional, Callable, Awaitable, Tuple
 from datetime import datetime
 
 from dotenv import load_dotenv
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
 from app.core.logger import get_logger
+from app.utils.helpers import sanitize_input
 
 # =========================
 # Configuration & Logging
@@ -45,7 +46,7 @@ class ScraperConfig:
 # =========================
 
 async def wait_until(predicate_async: Callable[[], Awaitable[bool]], timeout_ms: int, interval_ms: int = 400) -> bool:
-    loop = asyncio.get_event_loop()
+    loop = asyncio.get_running_loop()
     end = loop.time() + timeout_ms / 1000
     while loop.time() < end:
         try:
@@ -73,8 +74,170 @@ async def retry_async(fn: Callable[[], Awaitable[Any]], attempts: int, base_back
     raise last_exc
 
 
-# (💡 All your Playwright login, navigation, extraction helpers remain same)
-# keep: click_dual_login_if_present, click_logout_confirm_no_if_present, robust_fill_user_id_and_continue, etc.
+SelectorList = List[str]
+
+
+async def _wait_for_first_selector(
+    page,
+    selectors: SelectorList,
+    *,
+    description: str,
+    timeout_ms: int,
+) -> Any:
+    """Return the first element handle matching any selector, raising a helpful error otherwise."""
+
+    last_error: Optional[Exception] = None
+    for selector in selectors:
+        try:
+            element = await page.wait_for_selector(selector, timeout=timeout_ms, state="visible")
+            if element:
+                return element
+        except PlaywrightTimeoutError as exc:  # pragma: no cover - depends on live page
+            last_error = exc
+            log.debug("%s not found with selector %s", description, selector)
+    selectors_joined = ", ".join(selectors)
+    raise PlaywrightTimeoutError(f"Unable to locate {description}. Tried selectors: {selectors_joined}") from last_error
+
+
+async def _click_first(page, selectors: SelectorList, *, description: str, timeout_ms: int) -> None:
+    element = await _wait_for_first_selector(page, selectors, description=description, timeout_ms=timeout_ms)
+    await element.click()
+
+
+async def robust_fill_user_id_and_continue(page, cfg: ScraperConfig) -> None:
+    """Fill the user id field and press continue handling minor DOM differences."""
+
+    user_id_selectors: SelectorList = [
+        'input[name="panAadhaarUserId"]',
+        'input[formcontrolname="panAadhaarUserId"]',
+        'input[name="userId"]',
+        'input#panAdhaarUserId',
+        'input[type="text"][autocomplete="username"]',
+    ]
+    continue_selectors: SelectorList = [
+        'button[type="submit"]:has-text("Continue")',
+        'button:has-text("Continue")',
+        'text="Continue"',
+    ]
+
+    log.debug("Filling user id for %s", cfg.user_id)
+    user_input = await _wait_for_first_selector(
+        page,
+        user_id_selectors,
+        description="user id input",
+        timeout_ms=cfg.action_timeout_ms,
+    )
+    await user_input.fill(cfg.user_id)
+    await _click_first(page, continue_selectors, description="continue button", timeout_ms=cfg.action_timeout_ms)
+
+
+async def robust_fill_password_and_submit(page, cfg: ScraperConfig) -> None:
+    """Fill the password box and submit the form."""
+
+    password_selectors: SelectorList = [
+        'input[type="password"]',
+        'input[formcontrolname="password"]',
+        'input[name="password"]',
+        'input#password',
+    ]
+    login_selectors: SelectorList = [
+        'button[type="submit"]:has-text("Login")',
+        'button:has-text("Login")',
+        'text="Login"',
+    ]
+
+    password_input = await _wait_for_first_selector(
+        page,
+        password_selectors,
+        description="password input",
+        timeout_ms=cfg.action_timeout_ms,
+    )
+    await password_input.fill(cfg.password)
+    await _click_first(page, login_selectors, description="login button", timeout_ms=cfg.action_timeout_ms)
+
+
+async def spa_safe_goto_profile(page, cfg: ScraperConfig) -> None:
+    """Navigate to the profile page and ensure the SPA finished routing."""
+
+    await page.goto(cfg.profile_url, wait_until="domcontentloaded", timeout=cfg.navigation_timeout_ms)
+
+    async def _is_on_profile() -> bool:
+        base_profile_url = cfg.profile_url.split("#")[0]
+        return page.url.startswith(base_profile_url)
+
+    if not await wait_until(_is_on_profile, cfg.navigation_timeout_ms):
+        raise PlaywrightTimeoutError("Timed out waiting for profile page to load")
+
+
+FIELD_MAPPINGS: Dict[str, str] = {
+    "Name of Organisation": "nameOfOrganisation",
+    "Name of Organisation*": "nameOfOrganisation",
+    "Date of Incorporation": "dateOfIncorporation",
+    "PAN": "pan",
+    "PAN Status": "panStatus",
+    "Residential Status": "residentialStatus",
+    "Type of Company": "typeOfCompany",
+    "Email": "email",
+    "Mobile": "mobile",
+    "Address": "address",
+}
+
+
+async def extract_profile_data(page) -> Dict[str, Any]:
+    """Extract key profile details from the profile screen."""
+
+    await page.wait_for_load_state("domcontentloaded")
+    await page.wait_for_timeout(500)
+
+    rows: List[Tuple[str, str]] = await page.evaluate(
+        """
+        () => {
+            const pairs = [];
+            const tables = Array.from(document.querySelectorAll('table'));
+            for (const table of tables) {
+                for (const row of Array.from(table.querySelectorAll('tr'))) {
+                    const cells = row.querySelectorAll('th,td');
+                    if (cells.length < 2) continue;
+                    const key = cells[0].innerText?.trim();
+                    const value = cells[1].innerText?.trim();
+                    if (key && value) {
+                        pairs.push([key, value]);
+                    }
+                }
+            }
+            if (!pairs.length) {
+                const definitionTerms = Array.from(document.querySelectorAll('dt'));
+                for (const term of definitionTerms) {
+                    const key = term.textContent?.trim();
+                    const value = term.nextElementSibling?.textContent?.trim();
+                    if (key && value) {
+                        pairs.push([key, value]);
+                    }
+                }
+            }
+            return pairs;
+        }
+        """,
+    )
+
+    raw: Dict[str, str] = {}
+    for key, value in rows:
+        cleaned_key = sanitize_input(key)
+        cleaned_value = sanitize_input(value)
+        raw[cleaned_key] = cleaned_value
+
+    if not raw:
+        raise RuntimeError("Unable to extract profile data from the page")
+
+    structured: Dict[str, Any] = {"raw": raw}
+    for original_key, mapped_key in FIELD_MAPPINGS.items():
+        if original_key in raw:
+            structured[mapped_key] = raw[original_key]
+
+    structured.setdefault("title", sanitize_input(await page.title()))
+    structured.setdefault("url", page.url)
+
+    return structured
 
 # =========================
 # Core Orchestration

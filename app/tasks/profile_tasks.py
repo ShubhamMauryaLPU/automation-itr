@@ -11,14 +11,12 @@ def fetch_itr_profile_task(self, user_id: str, password: str):
     Background Celery task to fetch ITR profile details asynchronously.
     Safely runs async Playwright logic inside a sync Celery worker.
     """
+    loop = asyncio.new_event_loop()
     try:
         logger.info(f"[task] Starting ITR profile fetch for user: {user_id}")
 
-        # ✅ FIX: Use asyncio.run() safely inside a new event loop
-        loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         result = loop.run_until_complete(fetch_itr_profile(user_id, password))
-        loop.close()
 
         logger.info(f"[task] Completed ITR profile fetch for user: {user_id}")
         return {"status": "success", "data": result}
@@ -33,3 +31,6 @@ def fetch_itr_profile_task(self, user_id: str, password: str):
             logger.critical(f"[task] Max retries exceeded for user: {user_id}")
 
         return {"status": "error", "message": str(e)}
+    finally:
+        asyncio.set_event_loop(None)
+        loop.close()

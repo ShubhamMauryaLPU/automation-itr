@@ -256,91 +256,95 @@ async def fetch_itr_profile(
     Logs in and fetches ITR profile details using Playwright automation.
     Returns structured dict data.
     """
-    cfg = ScraperConfig(
-        user_id=user_id or os.getenv("ITR_USER_ID", ""),
-        password=password or os.getenv("ITR_PASSWORD", ""),
-        headless=True if headless is None else bool(headless),
-        user_data_dir=user_data_dir or os.getenv("USER_DATA_DIR"),
-        chrome_path=chrome_path or os.getenv("CHROME_PATH"),
-        save_json_path=save_json_path,
-    )
+    try:
+        cfg = ScraperConfig(
+            user_id=user_id or os.getenv("ITR_USER_ID", ""),
+            password=password or os.getenv("ITR_PASSWORD", ""),
+            headless=True if headless is None else bool(headless),
+            user_data_dir=user_data_dir or os.getenv("USER_DATA_DIR"),
+            chrome_path=chrome_path or os.getenv("CHROME_PATH"),
+            save_json_path=save_json_path,
+        )
 
-    if not cfg.user_id or not cfg.password:
-        raise ValueError("Missing ITR_USER_ID and ITR_PASSWORD credentials.")
+        if not cfg.user_id or not cfg.password:
+            raise ValueError("Missing ITR_USER_ID and ITR_PASSWORD credentials.")
 
-    log.info(f"Starting ITR profile fetch (headless={cfg.headless})")
+        log.info(f"Starting ITR profile fetch (headless={cfg.headless})")
 
-    browser_args = ["--disable-dev-shm-usage", "--no-sandbox", "--disable-blink-features=AutomationControlled"]
+        browser_args = ["--disable-dev-shm-usage", "--no-sandbox", "--disable-blink-features=AutomationControlled"]
 
-    result: Dict[str, Any] = {"status": "INIT", "data": None}
+        async with async_playwright() as p:
+            chromium = p.chromium
+            context = None
+            browser = None
 
-    async with async_playwright() as p:
-        chromium = p.chromium
-        context = None
-        browser = None
+            try:
+                launch_kwargs = {"headless": cfg.headless, "args": browser_args}
+                if cfg.chrome_path and os.path.exists(cfg.chrome_path):
+                    launch_kwargs["executable_path"] = cfg.chrome_path
 
-        try:
-            launch_kwargs = {"headless": cfg.headless, "args": browser_args}
-            if cfg.chrome_path and os.path.exists(cfg.chrome_path):
-                launch_kwargs["executable_path"] = cfg.chrome_path
+                # Persistent vs temporary session
+                if cfg.user_data_dir:
+                    context = await chromium.launch_persistent_context(cfg.user_data_dir, **launch_kwargs)
+                else:
+                    browser = await chromium.launch(**launch_kwargs)
+                    context = await browser.new_context()
 
-            # Persistent vs temporary session
-            if cfg.user_data_dir:
-                context = await chromium.launch_persistent_context(cfg.user_data_dir, **launch_kwargs)
-            else:
-                browser = await chromium.launch(**launch_kwargs)
-                context = await browser.new_context()
+                if cfg.block_media:
+                    await context.route(
+                        re.compile(r".*\.(png|jpg|jpeg|gif|webp|svg|mp4|webm)(\?.*)?$", re.I),
+                        lambda route: asyncio.create_task(route.abort()),
+                    )
 
-            if cfg.block_media:
-                await context.route(
-                    re.compile(r".*\.(png|jpg|jpeg|gif|webp|svg|mp4|webm)(\?.*)?$", re.I),
-                    lambda route: asyncio.create_task(route.abort()),
+                page = await context.new_page()
+                page.set_default_timeout(cfg.action_timeout_ms)
+
+                async def do_login():
+                    await page.goto(cfg.login_url, wait_until="domcontentloaded", timeout=cfg.navigation_timeout_ms)
+                    await page.wait_for_timeout(400)
+                    await robust_fill_user_id_and_continue(page, cfg)
+                    await page.wait_for_timeout(800)
+                    await robust_fill_password_and_submit(page, cfg)
+                    await page.wait_for_timeout(800)
+
+                await retry_async(
+                    do_login,
+                    cfg.retries,
+                    cfg.retry_backoff_base_ms,
+                    lambda n, e: log.warning(f"Login retry {n}: {e}"),
                 )
 
-            page = await context.new_page()
-            page.set_default_timeout(cfg.action_timeout_ms)
+                async def goto_profile():
+                    await spa_safe_goto_profile(page, cfg)
+                    await page.wait_for_timeout(cfg.idle_wait_ms)
 
-            async def do_login():
-                await page.goto(cfg.login_url, wait_until="domcontentloaded", timeout=cfg.navigation_timeout_ms)
-                await page.wait_for_timeout(400)
-                await robust_fill_user_id_and_continue(page, cfg)
-                await page.wait_for_timeout(800)
-                await robust_fill_password_and_submit(page, cfg)
-                await page.wait_for_timeout(800)
+                await retry_async(goto_profile, 2, cfg.retry_backoff_base_ms)
 
-            await retry_async(do_login, cfg.retries, cfg.retry_backoff_base_ms, lambda n, e: log.warning(f"Login retry {n}: {e}"))
+                profile = await extract_profile_data(page)
+                result: Dict[str, Any] = {"status": "SUCCESS", "data": profile}
 
-            async def goto_profile():
-                await spa_safe_goto_profile(page, cfg)
-                await page.wait_for_timeout(cfg.idle_wait_ms)
+                if cfg.save_json_path:
+                    with open(cfg.save_json_path, "w", encoding="utf-8") as f:
+                        json.dump({"fetched_at": datetime.utcnow().isoformat() + "Z", "data": profile}, f, indent=2)
+                    log.info(f"Saved profile data to {cfg.save_json_path}")
 
-            await retry_async(goto_profile, 2, cfg.retry_backoff_base_ms)
+                return result
 
-            profile = await extract_profile_data(page)
-            result = {"status": "SUCCESS", "data": profile}
+            finally:
+                try:
+                    if context:
+                        await context.close()
+                except Exception:
+                    pass
+                try:
+                    if browser:
+                        await browser.close()
+                except Exception:
+                    pass
 
-            if cfg.save_json_path:
-                with open(cfg.save_json_path, "w", encoding="utf-8") as f:
-                    json.dump({"fetched_at": datetime.utcnow().isoformat() + "Z", "data": profile}, f, indent=2)
-                log.info(f"Saved profile data to {cfg.save_json_path}")
-
-        except Exception as e:
-            log.exception(f"Profile fetch failed: {e}")
-            result = {"status": "FAILURE", "error": str(e)}
-
-        finally:
-            try:
-                if context:
-                    await context.close()
-            except Exception:
-                pass
-            try:
-                if browser:
-                    await browser.close()
-            except Exception:
-                pass
-
-    return result
+    except Exception as e:
+        log.exception(f"Profile fetch failed: {e}")
+        return {"status": "FAILURE", "error": str(e)}
 
 
 # =========================

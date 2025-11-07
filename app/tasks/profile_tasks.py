@@ -24,9 +24,11 @@ def fetch_itr_profile_task(self, user_id: str, password: str):
     except Exception as e:
         logger.error(f"[task] Error while fetching for {user_id}: {str(e)}")
 
-        # Retry mechanism — retries up to max_retries
+        if isinstance(e, (ValueError, TypeError)):
+            return {"status": "error", "message": str(e)}
+
         try:
-            self.retry(exc=e)
+            raise self.retry(exc=e)
         except self.MaxRetriesExceededError:
             logger.critical(f"[task] Max retries exceeded for user: {user_id}")
 

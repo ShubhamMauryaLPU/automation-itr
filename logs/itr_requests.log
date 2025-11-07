@@ -379,3 +379,543 @@ NotImplementedError
 2025-11-05 15:18:30,211 - INFO - Waiting for profile content to render…
 2025-11-05 15:18:48,328 - INFO - Profile fields captured.
 2025-11-05 15:18:48,599 - INFO - Completed /api/itr/process in 53.307s
+2025-11-05 15:59:22,338 - INFO - Incoming request: /health from 127.0.0.1
+2025-11-05 15:59:22,341 - INFO - Completed /health in 0.003s
+2025-11-05 15:59:22,536 - INFO - Incoming request: /favicon.ico from 127.0.0.1
+2025-11-05 15:59:22,536 - INFO - Completed /favicon.ico in 0.0s
+2025-11-05 15:59:42,117 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 15:59:42,118 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 15:59:42,118 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<Connection.run() done, defined at C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 222, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 1708, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 502, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 15:59:42,126 - INFO - Completed /api/itr/process in 0.009s
+2025-11-05 16:00:45,824 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 16:00:45,825 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 16:00:45,826 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Connection.run() done, defined at C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_connection.py:303> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_connection.py", line 310, in run
+    await self._transport.connect()
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_transport.py", line 133, in connect
+    raise exc
+  File "C:\Users\shubham\AppData\Roaming\Python\Python312\site-packages\playwright\_impl\_transport.py", line 120, in connect
+    self._proc = await asyncio.create_subprocess_exec(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\subprocess.py", line 222, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 1708, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\asyncio\base_events.py", line 502, in _make_subprocess_transport
+    raise NotImplementedError
+NotImplementedError
+2025-11-05 16:00:45,833 - INFO - Completed /api/itr/process in 0.009s
+2025-11-05 16:01:43,260 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 16:01:43,261 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 16:01:44,238 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-05 16:01:45,345 - INFO - Filling User ID…
+2025-11-05 16:01:53,895 - INFO - Clicked first-step Continue/Proceed.
+2025-11-05 16:01:53,976 - INFO - Filling Password…
+2025-11-05 16:02:01,104 - INFO - Submitted password (clicked button).
+2025-11-05 16:02:08,224 - INFO - Navigating to profile…
+2025-11-05 16:02:11,547 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-05 16:02:17,621 - INFO - Waiting for profile content to render…
+2025-11-05 16:02:35,688 - INFO - Profile fields captured.
+2025-11-05 16:02:35,829 - INFO - Completed /api/itr/process in 52.569s
+2025-11-05 18:06:14,689 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 18:06:14,690 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 18:06:15,494 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-05 18:06:16,516 - INFO - Filling User ID…
+2025-11-05 18:06:25,088 - INFO - Clicked first-step Continue/Proceed.
+2025-11-05 18:06:25,176 - INFO - Filling Password…
+2025-11-05 18:06:32,210 - INFO - Submitted password (clicked button).
+2025-11-05 18:06:39,183 - INFO - Navigating to profile…
+2025-11-05 18:06:41,590 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-05 18:06:47,125 - INFO - Waiting for profile content to render…
+2025-11-05 18:07:05,183 - INFO - Profile fields captured.
+2025-11-05 18:07:05,332 - INFO - Completed /api/itr/process in 50.643s
+2025-11-05 21:50:41,724 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-05 21:50:41,725 - INFO - Starting login + profile fetch (headless=True)
+2025-11-05 21:50:42,639 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-05 21:50:43,721 - INFO - Filling User ID…
+2025-11-05 21:50:52,970 - INFO - Clicked first-step Continue/Proceed.
+2025-11-05 21:50:53,256 - INFO - Filling Password…
+2025-11-05 21:51:00,324 - INFO - Submitted password (clicked button).
+2025-11-05 21:51:07,212 - INFO - Navigating to profile…
+2025-11-05 21:51:09,626 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-05 21:51:16,410 - INFO - Waiting for profile content to render…
+2025-11-05 21:51:34,474 - INFO - Profile fields captured.
+2025-11-05 21:51:34,623 - INFO - Completed /api/itr/process in 52.899s
+2025-11-06 11:46:50,177 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 11:46:50,180 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 11:46:51,002 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 11:46:52,009 - INFO - Filling User ID…
+2025-11-06 11:47:00,586 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 11:47:00,675 - INFO - Filling Password…
+2025-11-06 11:47:07,734 - INFO - Submitted password (clicked button).
+2025-11-06 11:47:08,691 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 11:47:13,261 - INFO - Navigating to profile…
+2025-11-06 11:47:15,519 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 11:47:21,080 - INFO - Waiting for profile content to render…
+2025-11-06 11:47:39,149 - INFO - Profile fields captured.
+2025-11-06 11:47:39,298 - INFO - Completed /api/itr/process in 49.122s
+2025-11-06 11:53:08,505 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 11:53:08,507 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 11:53:09,329 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 11:53:10,465 - INFO - Filling User ID…
+2025-11-06 11:53:19,037 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 11:53:19,143 - INFO - Filling Password…
+2025-11-06 11:53:26,223 - INFO - Submitted password (clicked button).
+2025-11-06 11:53:27,202 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 11:53:32,002 - INFO - Navigating to profile…
+2025-11-06 11:53:34,534 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 11:53:40,084 - INFO - Waiting for profile content to render…
+2025-11-06 11:53:58,154 - INFO - Profile fields captured.
+2025-11-06 11:53:58,337 - INFO - Completed /api/itr/process in 49.832s
+2025-11-06 11:55:29,987 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 11:55:29,988 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 11:55:30,773 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 11:55:31,829 - INFO - Filling User ID…
+2025-11-06 11:55:40,389 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 11:55:40,480 - INFO - Filling Password…
+2025-11-06 11:55:47,566 - INFO - Submitted password (clicked button).
+2025-11-06 11:55:48,532 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 11:55:53,076 - INFO - Navigating to profile…
+2025-11-06 11:55:55,422 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 11:56:00,986 - INFO - Waiting for profile content to render…
+2025-11-06 11:56:19,047 - INFO - Profile fields captured.
+2025-11-06 11:56:19,205 - INFO - Completed /api/itr/process in 49.218s
+2025-11-06 11:58:55,844 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 11:58:55,847 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 11:58:56,611 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 11:58:57,751 - INFO - Filling User ID…
+2025-11-06 11:59:06,326 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 11:59:06,462 - INFO - Filling Password…
+2025-11-06 11:59:13,476 - INFO - Submitted password (clicked button).
+2025-11-06 11:59:14,427 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 11:59:19,194 - INFO - Navigating to profile…
+2025-11-06 11:59:21,448 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 11:59:27,010 - INFO - Waiting for profile content to render…
+2025-11-06 11:59:45,066 - INFO - Profile fields captured.
+2025-11-06 11:59:45,200 - INFO - Completed /api/itr/process in 49.356s
+2025-11-06 12:01:15,504 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:01:15,506 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:01:16,260 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:01:17,275 - INFO - Filling User ID…
+2025-11-06 12:01:25,824 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:01:25,904 - INFO - Filling Password…
+2025-11-06 12:01:32,961 - INFO - Submitted password (clicked button).
+2025-11-06 12:01:33,925 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:01:38,511 - INFO - Navigating to profile…
+2025-11-06 12:01:40,888 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:01:46,470 - INFO - Waiting for profile content to render…
+2025-11-06 12:02:04,525 - INFO - Profile fields captured.
+2025-11-06 12:02:04,679 - INFO - Completed /api/itr/process in 49.175s
+2025-11-06 12:02:15,164 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:02:15,165 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:02:15,931 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:02:16,943 - INFO - Filling User ID…
+2025-11-06 12:02:25,496 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:02:25,596 - INFO - Filling Password…
+2025-11-06 12:02:32,638 - INFO - Submitted password (clicked button).
+2025-11-06 12:02:33,599 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:02:38,359 - INFO - Navigating to profile…
+2025-11-06 12:02:40,712 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:02:46,337 - INFO - Waiting for profile content to render…
+2025-11-06 12:03:04,407 - INFO - Profile fields captured.
+2025-11-06 12:03:04,597 - INFO - Completed /api/itr/process in 49.433s
+2025-11-06 12:07:38,798 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:07:38,800 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:07:39,602 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:07:40,644 - INFO - Filling User ID…
+2025-11-06 12:07:49,238 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:07:49,356 - INFO - Filling Password…
+2025-11-06 12:07:56,428 - INFO - Submitted password (clicked button).
+2025-11-06 12:07:57,397 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:08:02,102 - INFO - Navigating to profile…
+2025-11-06 12:08:04,706 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:08:10,311 - INFO - Waiting for profile content to render…
+2025-11-06 12:08:28,370 - INFO - Profile fields captured.
+2025-11-06 12:08:28,503 - INFO - Completed /api/itr/process in 49.705s
+2025-11-06 12:09:40,354 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:09:40,355 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:09:41,132 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:09:42,134 - INFO - Filling User ID…
+2025-11-06 12:09:50,718 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:09:50,872 - INFO - Filling Password…
+2025-11-06 12:09:57,967 - INFO - Submitted password (clicked button).
+2025-11-06 12:09:58,945 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:10:03,551 - INFO - Navigating to profile…
+2025-11-06 12:10:06,024 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:10:11,635 - INFO - Waiting for profile content to render…
+2025-11-06 12:10:29,699 - INFO - Profile fields captured.
+2025-11-06 12:10:29,857 - INFO - Completed /api/itr/process in 49.503s
+2025-11-06 12:11:27,467 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:11:27,468 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:11:28,354 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:11:29,442 - INFO - Filling User ID…
+2025-11-06 12:11:38,042 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:11:38,176 - INFO - Filling Password…
+2025-11-06 12:11:45,221 - INFO - Submitted password (clicked button).
+2025-11-06 12:11:46,206 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:11:50,987 - INFO - Navigating to profile…
+2025-11-06 12:11:53,528 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:11:59,157 - INFO - Waiting for profile content to render…
+2025-11-06 12:12:17,220 - INFO - Profile fields captured.
+2025-11-06 12:12:17,408 - INFO - Completed /api/itr/process in 49.941s
+2025-11-06 12:12:33,585 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:12:33,587 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:12:34,582 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:12:35,720 - INFO - Filling User ID…
+2025-11-06 12:12:44,279 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:12:44,387 - INFO - Filling Password…
+2025-11-06 12:12:51,435 - INFO - Submitted password (clicked button).
+2025-11-06 12:12:52,399 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:12:57,152 - INFO - Navigating to profile…
+2025-11-06 12:12:59,676 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:13:05,294 - INFO - Waiting for profile content to render…
+2025-11-06 12:13:23,363 - INFO - Profile fields captured.
+2025-11-06 12:13:23,522 - INFO - Completed /api/itr/process in 49.937s
+2025-11-06 12:14:05,398 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 12:14:05,398 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 12:14:06,291 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 12:14:07,426 - INFO - Filling User ID…
+2025-11-06 12:14:15,994 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 12:14:16,149 - INFO - Filling Password…
+2025-11-06 12:14:23,201 - INFO - Submitted password (clicked button).
+2025-11-06 12:14:24,179 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 12:14:29,078 - INFO - Navigating to profile…
+2025-11-06 12:14:31,401 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 12:14:36,989 - INFO - Waiting for profile content to render…
+2025-11-06 12:14:55,039 - INFO - Profile fields captured.
+2025-11-06 12:14:55,194 - INFO - Completed /api/itr/process in 49.796s
+2025-11-06 15:03:43,607 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 15:03:43,609 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 15:03:44,419 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 15:03:45,466 - INFO - Filling User ID…
+2025-11-06 15:03:54,009 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 15:03:54,092 - INFO - Filling Password…
+2025-11-06 15:04:01,170 - INFO - Submitted password (clicked button).
+2025-11-06 15:04:02,136 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 15:04:07,098 - INFO - Navigating to profile…
+2025-11-06 15:04:09,554 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 15:04:15,120 - INFO - Waiting for profile content to render…
+2025-11-06 15:04:33,183 - INFO - Profile fields captured.
+2025-11-06 15:04:33,326 - INFO - Completed /api/itr/process in 49.719s
+2025-11-06 17:41:45,344 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:41:45,346 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:41:46,100 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:41:47,106 - INFO - Filling User ID…
+2025-11-06 17:41:55,695 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 17:41:55,786 - INFO - Filling Password…
+2025-11-06 17:42:02,826 - INFO - Submitted password (clicked button).
+2025-11-06 17:42:09,851 - INFO - Navigating to profile…
+2025-11-06 17:42:12,297 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 17:42:17,875 - INFO - Waiting for profile content to render…
+2025-11-06 17:42:35,945 - INFO - Profile fields captured.
+2025-11-06 17:42:36,094 - INFO - Completed /api/itr/process in 50.75s
+2025-11-06 17:43:46,361 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:43:46,362 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:43:47,118 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:43:48,194 - INFO - Filling User ID…
+2025-11-06 17:43:56,790 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 17:43:56,869 - INFO - Filling Password…
+2025-11-06 17:44:03,903 - INFO - Submitted password (clicked button).
+2025-11-06 17:44:04,870 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 17:44:09,649 - INFO - Navigating to profile…
+2025-11-06 17:44:12,029 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 17:44:17,578 - INFO - Waiting for profile content to render…
+2025-11-06 17:44:35,646 - INFO - Profile fields captured.
+2025-11-06 17:44:35,802 - INFO - Completed /api/itr/process in 49.441s
+2025-11-06 17:58:20,996 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:58:20,997 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:58:21,804 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:58:22,801 - INFO - Filling User ID…
+2025-11-06 17:58:31,371 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 17:58:31,517 - INFO - Filling Password…
+2025-11-06 17:58:35,730 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:58:35,730 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:58:36,525 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:58:36,708 - INFO - Completed /api/itr/process in 0.978s
+2025-11-06 17:58:38,581 - INFO - Submitted password (clicked button).
+2025-11-06 17:58:39,550 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 17:58:41,746 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:58:41,747 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:58:42,497 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:58:42,697 - INFO - Completed /api/itr/process in 0.951s
+2025-11-06 17:58:44,102 - INFO - Navigating to profile…
+2025-11-06 17:58:46,583 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 17:58:52,113 - INFO - Waiting for profile content to render…
+2025-11-06 17:59:01,309 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:59:01,346 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:59:02,307 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:59:02,506 - INFO - Completed /api/itr/process in 1.197s
+2025-11-06 17:59:10,179 - INFO - Profile fields captured.
+2025-11-06 17:59:10,327 - INFO - Completed /api/itr/process in 49.331s
+2025-11-06 17:59:24,268 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:59:24,269 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:59:24,990 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:59:25,964 - INFO - Filling User ID…
+2025-11-06 17:59:34,887 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 17:59:35,075 - INFO - Filling Password…
+2025-11-06 17:59:42,082 - INFO - Submitted password (clicked button).
+2025-11-06 17:59:43,042 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 17:59:44,342 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:59:44,343 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:59:47,176 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:59:47,595 - INFO - Completed /api/itr/process in 3.254s
+2025-11-06 17:59:49,384 - INFO - Navigating to profile…
+2025-11-06 17:59:52,350 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 17:59:58,074 - INFO - Waiting for profile content to render…
+2025-11-06 17:59:58,287 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 17:59:58,287 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 17:59:59,079 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 17:59:59,294 - INFO - Completed /api/itr/process in 1.007s
+2025-11-06 18:00:05,076 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:00:05,077 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:00:05,995 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:00:06,181 - INFO - Completed /api/itr/process in 1.106s
+2025-11-06 18:00:16,134 - INFO - Profile fields captured.
+2025-11-06 18:00:16,270 - INFO - Completed /api/itr/process in 52.002s
+2025-11-06 18:00:21,938 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:00:21,940 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:00:22,717 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:00:23,736 - INFO - Filling User ID…
+2025-11-06 18:00:32,338 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 18:00:32,412 - INFO - Filling Password…
+2025-11-06 18:00:39,473 - INFO - Submitted password (clicked button).
+2025-11-06 18:00:40,437 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 18:00:45,173 - INFO - Navigating to profile…
+2025-11-06 18:00:47,539 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 18:00:52,621 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:00:52,622 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:00:53,137 - INFO - Waiting for profile content to render…
+2025-11-06 18:00:53,398 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:00:53,592 - INFO - Completed /api/itr/process in 0.972s
+2025-11-06 18:00:57,447 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:00:57,449 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:00:58,227 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:00:58,413 - INFO - Completed /api/itr/process in 0.966s
+2025-11-06 18:01:02,027 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:01:02,029 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:01:03,096 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:01:03,283 - INFO - Completed /api/itr/process in 1.256s
+2025-11-06 18:01:07,730 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:01:07,731 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:01:08,663 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:01:08,872 - INFO - Completed /api/itr/process in 1.142s
+2025-11-06 18:01:11,196 - INFO - Profile fields captured.
+2025-11-06 18:01:11,354 - INFO - Completed /api/itr/process in 49.416s
+2025-11-06 18:01:21,969 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:01:21,970 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:01:22,705 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:01:23,765 - INFO - Filling User ID…
+2025-11-06 18:01:32,321 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 18:01:32,398 - INFO - Filling Password…
+2025-11-06 18:01:37,797 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:01:37,799 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:01:38,587 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:01:38,773 - INFO - Completed /api/itr/process in 0.976s
+2025-11-06 18:01:39,422 - INFO - Submitted password (clicked button).
+2025-11-06 18:01:40,384 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 18:01:45,215 - INFO - Navigating to profile…
+2025-11-06 18:01:47,552 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 18:01:53,120 - INFO - Waiting for profile content to render…
+2025-11-06 18:02:11,179 - INFO - Profile fields captured.
+2025-11-06 18:02:11,323 - INFO - Completed /api/itr/process in 49.355s
+2025-11-06 18:02:20,157 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 18:02:20,159 - INFO - Starting login + profile fetch (headless=True)
+2025-11-06 18:02:20,932 - INFO - Using persistent profile: C:\temp\chrome_profile_copy
+2025-11-06 18:02:21,915 - INFO - Filling User ID…
+2025-11-06 18:02:30,465 - INFO - Clicked first-step Continue/Proceed.
+2025-11-06 18:02:30,557 - INFO - Filling Password…
+2025-11-06 18:02:37,622 - INFO - Submitted password (clicked button).
+2025-11-06 18:02:38,585 - INFO - Handled dual-login dialog (clicked 'Login Here').
+2025-11-06 18:02:43,348 - INFO - Navigating to profile…
+2025-11-06 18:02:45,729 - INFO - Closed logout confirmation (clicked 'No').
+2025-11-06 18:02:51,225 - INFO - Waiting for profile content to render…
+2025-11-06 18:03:09,292 - INFO - Profile fields captured.
+2025-11-06 18:03:09,484 - INFO - Completed /api/itr/process in 49.327s
+2025-11-06 20:26:27,684 - INFO - Incoming request: /health from 127.0.0.1
+2025-11-06 20:26:27,685 - INFO - Completed /health in 0.001s
+2025-11-06 20:26:28,209 - INFO - Incoming request: /favicon.ico from 127.0.0.1
+2025-11-06 20:26:28,210 - INFO - Completed /favicon.ico in 0.001s
+2025-11-06 21:03:13,285 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:03:16,421 - INFO - Completed /api/itr/process in 3.136s
+2025-11-06 21:03:26,436 - INFO - Incoming request: /api/itr/status/d26a3778-afb9-448f-b991-0c1fe8e05dbf from 127.0.0.1
+2025-11-06 21:03:27,441 - INFO - Completed /api/itr/status/d26a3778-afb9-448f-b991-0c1fe8e05dbf in 1.004s
+2025-11-06 21:03:35,799 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:03:35,803 - INFO - Completed /api/itr/process in 0.004s
+2025-11-06 21:03:45,810 - INFO - Incoming request: /api/itr/status/24ecf9a2-d001-4877-b99c-dc6dd71e8f0b from 127.0.0.1
+2025-11-06 21:03:45,812 - INFO - Completed /api/itr/status/24ecf9a2-d001-4877-b99c-dc6dd71e8f0b in 0.003s
+2025-11-06 21:06:27,863 - INFO - Incoming request: /health from 127.0.0.1
+2025-11-06 21:06:27,866 - INFO - Completed /health in 0.003s
+2025-11-06 21:06:28,038 - INFO - Incoming request: /favicon.ico from 127.0.0.1
+2025-11-06 21:06:28,039 - INFO - Completed /favicon.ico in 0.001s
+2025-11-06 21:06:43,896 - INFO - Incoming request: /health from 127.0.0.1
+2025-11-06 21:06:43,898 - INFO - Completed /health in 0.002s
+2025-11-06 21:08:17,814 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:08:17,816 - INFO - Completed /api/itr/process in 0.003s
+2025-11-06 21:15:08,918 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:15:08,920 - INFO - Completed /api/itr/process in 0.002s
+2025-11-06 21:21:48,685 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:21:48,688 - INFO - Completed /api/itr/process in 0.003s
+2025-11-06 21:21:58,700 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:21:58,702 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:08,708 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:08,710 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:18,717 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:18,719 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:28,727 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:28,729 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:38,738 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:38,740 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:48,747 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:48,749 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:22:58,756 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:22:58,757 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:23:08,767 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:23:08,769 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.001s
+2025-11-06 21:23:18,776 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:23:18,779 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.003s
+2025-11-06 21:23:28,788 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:23:28,790 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:23:38,797 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:23:38,799 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:23:48,807 - INFO - Incoming request: /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb from 127.0.0.1
+2025-11-06 21:23:48,810 - INFO - Completed /api/itr/status/deab71bc-8458-4d80-a553-a1e66abddefb in 0.002s
+2025-11-06 21:24:07,235 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:24:07,237 - INFO - Completed /api/itr/process in 0.002s
+2025-11-06 21:24:17,242 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:24:17,244 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:24:27,255 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:24:27,257 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.003s
+2025-11-06 21:24:37,264 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:24:37,266 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:24:47,274 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:24:47,276 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:24:57,284 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:24:57,286 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:07,293 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:07,295 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:17,302 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:17,305 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.003s
+2025-11-06 21:25:27,312 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:27,314 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:37,322 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:37,324 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:47,332 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:47,334 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:57,342 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:25:57,344 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:25:57,767 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:25:57,773 - INFO - Completed /api/itr/process in 0.006s
+2025-11-06 21:26:07,350 - INFO - Incoming request: /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 from 127.0.0.1
+2025-11-06 21:26:07,352 - INFO - Completed /api/itr/status/a316684b-1b87-4018-b282-4dbf2deab192 in 0.002s
+2025-11-06 21:26:07,777 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:07,779 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:26:17,787 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:17,789 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:26:27,797 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:27,799 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:26:37,807 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:37,810 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:26:47,818 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:47,820 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:26:57,826 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:26:57,828 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.001s
+2025-11-06 21:27:07,835 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:07,837 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:27:17,844 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:17,846 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:27:27,853 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:27,858 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.005s
+2025-11-06 21:27:37,867 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:37,869 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.003s
+2025-11-06 21:27:47,876 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:47,878 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:27:57,885 - INFO - Incoming request: /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e from 127.0.0.1
+2025-11-06 21:27:57,887 - INFO - Completed /api/itr/status/3d1584a7-fab7-42f8-9a17-b1327f89b11e in 0.002s
+2025-11-06 21:33:47,571 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:33:47,573 - INFO - Completed /api/itr/process in 0.002s
+2025-11-06 21:33:57,579 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:33:57,581 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:34:07,591 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:07,593 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:34:17,600 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:17,602 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:34:27,608 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:27,610 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:34:37,620 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:37,623 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.003s
+2025-11-06 21:34:47,629 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:47,631 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:34:57,642 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:34:57,645 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.003s
+2025-11-06 21:35:07,652 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:35:07,654 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:35:17,663 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:35:17,665 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:35:27,672 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:35:27,674 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.002s
+2025-11-06 21:35:37,684 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:35:37,686 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.003s
+2025-11-06 21:35:47,693 - INFO - Incoming request: /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 from 127.0.0.1
+2025-11-06 21:35:47,696 - INFO - Completed /api/itr/status/9558d07c-1a1b-4ab3-ace0-b477db0f7472 in 0.003s
+2025-11-06 21:38:23,806 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:38:23,809 - INFO - Completed /api/itr/process in 0.003s
+2025-11-06 21:48:45,772 - INFO - Incoming request: /api/v1/user/verify from 127.0.0.1
+2025-11-06 21:48:45,772 - INFO - Completed /api/v1/user/verify in 0.0s
+2025-11-06 21:48:47,846 - INFO - Incoming request: /api/v1/user/verify from 127.0.0.1
+2025-11-06 21:48:47,846 - INFO - Completed /api/v1/user/verify in 0.0s
+2025-11-06 21:49:04,574 - INFO - Incoming request: /api/v1/user/verify from 127.0.0.1
+2025-11-06 21:49:04,574 - INFO - Completed /api/v1/user/verify in 0.0s
+2025-11-06 21:49:10,628 - INFO - Incoming request: /api/itr/process from 127.0.0.1
+2025-11-06 21:49:13,776 - INFO - Completed /api/itr/process in 3.148s
+2025-11-06 21:49:23,784 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:49:24,790 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 1.006s
+2025-11-06 21:49:34,796 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:49:34,798 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.001s
+2025-11-06 21:49:44,803 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:49:44,805 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.002s
+2025-11-06 21:49:54,811 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:49:54,814 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.003s
+2025-11-06 21:50:04,820 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:04,821 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.001s
+2025-11-06 21:50:14,828 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:14,831 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.003s
+2025-11-06 21:50:24,838 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:24,841 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.002s
+2025-11-06 21:50:34,846 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:34,847 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.001s
+2025-11-06 21:50:44,854 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:44,856 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.002s
+2025-11-06 21:50:54,864 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:50:54,866 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.002s
+2025-11-06 21:51:04,873 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:51:04,876 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.003s
+2025-11-06 21:51:14,884 - INFO - Incoming request: /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 from 127.0.0.1
+2025-11-06 21:51:14,886 - INFO - Completed /api/itr/status/56b95de4-d4be-4715-9d6c-f6822132a409 in 0.003s
+2025-11-06 21:51:56,185 - INFO - Incoming request: /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 from 127.0.0.1
+2025-11-06 21:51:56,186 - INFO - Completed /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 in 0.001s
+2025-11-06 21:56:11,354 - INFO - Incoming request: /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 from 127.0.0.1
+2025-11-06 21:56:11,355 - INFO - Completed /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 in 0.001s
+2025-11-06 21:56:13,346 - INFO - Incoming request: /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 from 127.0.0.1
+2025-11-06 21:56:13,347 - INFO - Completed /api/itr/status/b7581f09-6b13-4f15-b391-a4406ff5b766 in 0.001s

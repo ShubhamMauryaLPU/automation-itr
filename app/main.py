@@ -1,80 +1,49 @@
 from fastapi import FastAPI
 import asyncio
 import sys
+from fastapi.middleware.cors import CORSMiddleware
+from app.controllers import profile_controller
+from app.core.config import settings
+from app.core.itr_middleware import ITRMiddleware
 
-# -------------------------------------------------------------------
-# 🩵 FIX for Python 3.13 + Windows + Playwright
-# -------------------------------------------------------------------
-# Playwright requires a Selector-based event loop that supports
-# subprocess spawning (Proactor does not).  We set it here so it
-# takes effect before any async code or FastAPI/Uvicorn loop starts.
-# -------------------------------------------------------------------
+# Fix for Playwright on Windows (important for RDP)
 if sys.platform.startswith("win"):
     try:
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-        print("[init] Using WindowsSelectorEventLoopPolicy (Playwright fix applied).")
+        print("[init] Using WindowsSelectorEventLoopPolicy for Playwright.")
     except Exception as e:
-        print(f"[init] Failed to set event loop policy: {e}")
-# -------------------------------------------------------------------
+        print(f"[init] Failed to set Windows event loop policy: {e}")
 
-from fastapi.middleware.cors import CORSMiddleware
-from app.controllers import profile_controller      # your router
-from app.core.config import settings
-from app.core.itr_middleware import ITRMiddleware   # custom middleware
-
-# -------------------------------------------------------------------
-#  FastAPI Application Configuration
-# -------------------------------------------------------------------
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
-    description=(
-        "ITR Profile Automation microservice handling automation "
-        "and heavy processing tasks using Playwright."
-    ),
+    description="Handles ITR profile automation tasks asynchronously using Celery + Playwright."
 )
 
-# -------------------------------------------------------------------
-#  Global Middleware
-# -------------------------------------------------------------------
-# 1️⃣ Enable CORS (configure specific origins in production)
+# CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Change to your Vercel domain in prod
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# 2️⃣ Custom logging / timing middleware
+# Logging middleware
 app.add_middleware(ITRMiddleware)
 
-# -------------------------------------------------------------------
-#  Health Check Route
-# -------------------------------------------------------------------
 @app.get("/health")
 def health_check():
-    """Simple uptime check for monitoring and load balancers."""
     return {"status": "ok", "service": settings.PROJECT_NAME}
 
-# -------------------------------------------------------------------
-#  Core Routers
-# -------------------------------------------------------------------
+# Routers
 app.include_router(profile_controller.router, prefix=settings.API_PREFIX)
 
-# -------------------------------------------------------------------
-#  Local Dev Entry Point
-# -------------------------------------------------------------------
 if __name__ == "__main__":
-    # ✅ Set policy again inside the entry point so Uvicorn reload workers inherit it
-    if sys.platform.startswith("win"):
-        try:
-            asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-            print("[main] Reinforced WindowsSelectorEventLoopPolicy for reload workers.")
-        except Exception as e:
-            print(f"[main] Failed to reset event loop policy: {e}")
-
     import uvicorn
+
+    if sys.platform.startswith("win"):
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
     uvicorn.run(
         "app.main:app",

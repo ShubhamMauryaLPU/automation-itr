@@ -1,15 +1,13 @@
-# app/controllers/profile_controller.py
 from fastapi import APIRouter, Request, HTTPException
-from app.services.itr_service import  fetch_itr_profile
-import traceback
+from app.tasks.profile_tasks import fetch_itr_profile_task
+from app.core.celery_app import celery_app
 
 router = APIRouter(tags=["ITR Profile Automation"])
 
 @router.post("/process")
 async def process_itr_profile(request: Request):
     """
-    POST endpoint to trigger ITR profile automation.
-    Expects JSON: { "userId": "...", "password": "..." }
+    Trigger Celery background task to fetch ITR profile details.
     """
     try:
         body = await request.json()
@@ -19,17 +17,26 @@ async def process_itr_profile(request: Request):
         if not user_id or not password:
             raise HTTPException(status_code=400, detail="Missing userId or password")
 
-        # Run automation service
-        result = await fetch_itr_profile(user_id, password)
+        # Queue task to Celery
+        task = fetch_itr_profile_task.delay(user_id, password)
 
         return {
-            "status": "success",
-            "message": "Profile fetched successfully",
-            "data": result
+            "status": "queued",
+            "task_id": task.id,
+            "message": f"ITR profile automation started for {user_id}."
         }
-
-    except HTTPException:
-        raise
     except Exception as e:
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/status/{task_id}")
+async def get_task_status(task_id: str):
+    """
+    Get Celery task status and result.
+    """
+    task_result = celery_app.AsyncResult(task_id)
+    return {
+        "task_id": task_id,
+        "status": task_result.status,
+        "result": task_result.result if task_result.ready() else None
+    }

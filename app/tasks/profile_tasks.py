@@ -31,7 +31,8 @@ def fetch_itr_profile_task(self, user_id: str, password: str):
             raise self.retry(exc=e)
         except self.MaxRetriesExceededError:
             logger.critical(f"[task] Max retries exceeded for user: {user_id}")
-            return {"status": "error", "message": str(e)}
+
+        return {"status": "error", "message": str(e)}
     finally:
         asyncio.set_event_loop(None)
         loop.close()
